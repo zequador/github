@@ -1,0 +1,100 @@
+===============================================================================================================================
+=********************************************************Systems HELP*********************************************************=
+=-----------------------------------------------------------------------------------------------------------------------------=
+=                        System Address = 00           F/W Version : 2.10                                                     =
+=   Azz                           :  All Commands start by Prefix System Address zz, if [01-99]                               =
+=-----------------------------------------------------------------------------------------------------------------------------=
+=   H                             : Help                                                                                      =
+=   STA                           : Show Global System Status                                                                 =
+=   SET RBT                       : Reboot Device                                                                             =
+=   SET RST                       : Reset to Factory Defaults                                                                 =
+=   SET ADDR xx                   : Set System Address to xx {xx=[00~99](00=Single)}                                          =
+=   SET FAN AUTO EN/DIS           : Set Fan Auto Run Enable/Disable                                                           =
+=   SET FAN SPEED x               : Set Fan Speed{x=[0~3]}                                                                    =
+=   GET ADDR                      : Get System Address                                                                        =
+=   GET STA                       : Get System System Status                                                                  =
+=   GET DEV TEMP                  : Get Device Temperature                                                                    =
+=   GET FAN AUTO                  : Get Fan Auto Run Status                                                                   =
+=   GET FAN SPEED                 : Get Fan Speed Value                                                                       =
+=   GET INx SIG STA               : Get Input x Signal Status{x=[0~6](0=ALL)}                                                 =
+=-----------------------------------------------------------------------------------------------------------------------------=
+=Output Setup Commands:                                                                                                       =
+=   SET OUTx VS INy               : Set Output x To Input y{x=[0~2](0=ALL), y=[1~6]}                                          =
+=   SET OUT1 VIDEOy               : Set Output1 VIDEO Mode {y=[2,5](2=4K->2K,5=ICT Mode)}                                     =
+=   SET EXA BTV OUTx              : Set Ex-Audio Output bind to Outputx{x=[1~2]}                                              =
+=   SET SWITCH MODEx              : Set Switch Mode To Single Switch or Double Switch{x=[0~1]}                                =
+=   SET OUTx EXA EN/DIS           : Set Ex-Audio Output Enable/Disable{x=[0~1](0=ALL)}                                        =
+=   SET OUTx EXAUD LEVy           : Set Output x Ex-Audio(Balanced) Volume Levely{x=[0~1](0=ALL),y=[0~20]}                    =
+=   SET OUT1 EXA MIC EN/DIS       : Set EX-Audio Route to Microphone Input Enable/Disable                                     =
+=   SET OUTx STREAM ON/OFF        : Set Output x Stream ON/OFF{x=[0~2](0=ALL)}                                                =
+=   SET OUT1 TP POE y             : Set Output1 POE Mode{y=[0~1](0=Auto,1=Force)}                                             =
+=   SET OUTx HA MUTE ON/OFF       : Set HDMI Output x Audio Mute ON/OFF{x=[0~2](0=ALL)}                                       =
+=   SET OUT1 TP SGM EN/DIS        : Set HDBT Output Signal Generator Enable/Disable                                           =
+=   SET OUT2 HP SGM EN/DIS        : Set HDMI Output Signal Generator Enable/Disable                                           =
+=   GET OUTx VS                   : Get Output x Video Route{x=[0~2](0=ALL)}                                                  =
+=   GET OUT1 VIDEO                : Get Output1 Video Mode                                                                    =
+=   GET EXA BTV OUT               : Get Ex-Audio Output bind to Which Output                                                  =
+=   GET SWITCH MODE               : Get Switch Mode                                                                           =
+=   GET OUTx EXA                  : Get Ex-Audio Output Enable/Disable Status{x=[0~1](0=ALL)}                                 =
+=   GET OUTx EXAUD LEV            : Get Output x Ex-Audio(Balanced) Volume Level{x=[0~1](0=ALL)}                              =
+=   GET OUT1 EXA MIC              : Get EX-Audio Route to Microphone Input Enable/Disable Status                              =
+=   GET OUTx EDID DATA            : Get Output x EDID DATA{x=[1~2]}                                                           =
+=   GET OUTx STREAM               : Get Output x Stream ON/OFF Status{x=[0~2](0=ALL)}                                         =
+=   GET OUT1 TP POE               : Get Output1 POE Mode                                                                      =
+=   GET OUTx HA MUTE              : Get HDMI Output x Audio Mute Status{x=[0~2](0=ALL)}                                       =
+=   GET OUT1 TP SGM               : Get HDBT Output Signal Generator Enable/Disable Status                                    =
+=   GET OUT2 HP SGM               : Get HDMI Output Signal Generator Enable/Disable Status                                    =
+=-----------------------------------------------------------------------------------------------------------------------------=
+=Input Setup Commands:                                                                                                        =
+=   SET INx EDID y                : Set Input x EDID{x=[0~6](0=ALL), y=[0~32]}                                                =
+=                                   0:1080P_2CH          1:1080P_6CH          2:1080P_8CH          3:1080P_3D_2CH             =
+=                                   4:1080P_3D_6CH       5:1080P_3D_8CH       6:4K30HZ_3D_2CH      7:4K30HZ_3D_6CH            =
+=                                   8:4K30HZ_3D_8CH      9:4K60HzY420_3D_2CH  10:4K60HzY420_3D_6CH 11:4K60HzY420_3D_8CH       =
+=                                   12:4K60HZ_3D_2CH     13:4K60HZ_3D_6CH     14:4K60HZ_3D_8CH     15:1080P_2CH_HDR           =
+=                                   16:1080P_6CH_HDR     17:1080P_8CH_HDR     18:1080P_3D_2CH_HDR  19:1080P_3D_6CH_HDR        =
+=                                   20:1080P_3D_8CH_HDR  21:4K30HZ_3D_2CH_HDR 22:4K30HZ_3D_6CH_HDR 23:4K30HZ_3D_8CH_HDR       =
+=                                   24:4K60HzY420_3D_2CH_HDR      25:4K60HzY420_3D_6CH_HDR      26:4K60HzY420_3D_8CH_HDR      =
+=                                   27:4K60HZ_3D_2CH_HDR          28:4K60HZ_3D_6CH_HDR          29:4K60HZ_3D_8CH_HDR          =
+=                                   30:USER1_EDID                 31:USER2_EDID                 32:USER3_EDID                 =
+=   SET INx EDID CY OUTy          : Copy Output y EDID To Input x(USER1 BUF){x=[0~6](0=ALL), y=[1~2]}                         =
+=   SET INx EDID Uy DATAz         : Write EDID To  User y Buffer  of Input x{x=[0~6](0=ALL), y=[1~3],z=[EDID Data]}           =
+=   SET INx TP POE y              : Set INx POE Mode{x=[0-2](0=ALL),y=[0~1](0=Auto,1=Force)}                                  =
+=   GET INx EDID                  : Get Input x EDID  Index{x=[0~6](0=ALL)}                                                   =
+=   GET INx EDID y DATA           : Get Input x EDID y Data{x=[1~6],y=[0~32]}                                                 =
+=   GET INx TP POE                : Get INx POE Mode{x=[0-2](0=ALL)}                                                          =
+=-----------------------------------------------------------------------------------------------------------------------------=
+=Auto mode:                                                                                                                   =
+=   SET HDx AUTO EN/DIS           : Set HDMI1/HDMI2 Output Enter Auto Mode Control Enable/Disable                             =
+=                                   {x=0(HDMI1&HDMI2 Output),x=1(HDMI1 Output),x=2(HDMI2 Output)}                             =
+=   GET HDx AUTO                  : Get HDMI1/HDMI2 Output Auto Mode Control Status                                           =
+=-----------------------------------------------------------------------------------------------------------------------------=
+=Network Setup Command: ( xxx=[000-255], zzzz=[0001~9999]                                                                     =
+=   SET RIP xxx.xxx.xxx.xxx       : Set Route IP Address to xxx.xxx.xxx.xxx                                                   =
+=   SET HIP xxx.xxx.xxx.xxx       : Set Host IP Address to xxx.xxx.xxx.xxx                                                    =
+=   SET NMK xxx.xxx.xxx.xxx       : Set Net Mask to xxx.xxx.xxx.xxx                                                           =
+=   SET TIP zzzz                  : Set TCP/IP Port to zzzz                                                                   =
+=   SET DHCP y                    : Set DHCP {y=[0~1](0=Dis,1=Enable)}                                                        =
+=   GET RIP                       : Get Route IP Address                                                                      =
+=   GET HIP                       : Get Host IP Address                                                                       =
+=   GET NMK                       : Get Net Mask                                                                              =
+=   GET TIP                       : Get TCP/IP Port                                                                           =
+=   GET DHCP                      : Get DHCP Status                                                                           =
+=   GET MAC                       : Get MAC  Address                                                                          =
+=-----------------------------------------------------------------------------------------------------------------------------=
+=RS232 Route Setup Command:                                                                                                   =
+=   SET RS HRF Ix                 : Set HDBT RS232 RX From Input Port x{x=[1-2](I=Input,O=Output)}                            =
+=   SET RS HRF Ox                 : Set HDBT RS232 RX From output Port x{x=[1](I=Input,O=Output)}                             =
+=   SET RS PTH OUTx LENy BRz      : Set RS232 Pass Through to Output x                                                        =
+=                                   {x=[1],y=[1~100],z=[0~5](0=9600,1=14400,2=19200,3=38400,4=57600,5=115200)}                =
+=   SET RS PTH INx LENy BRz       : Set RS232 Pass Through to Input x                                                         =
+=                                   {x=[1-2],y=[1~100],z=[0~5](0=9600,1=14400,2=19200,3=38400,4=57600,5=115200)}              =
+=   GET RS HRF                    : Get HDBT RS232 RX From Port State                                                         =
+=-----------------------------------------------------------------------------------------------------------------------------=
+=IR Code Setup Command:                                                                                                       =
+=   SET IR SYS xx.yy              : Set IR Custom Code{xx=[00-FFH],yy=[00-FFH]}                                               =
+=   SET IR OUTx INy CODE zz       : Set IR Data Code{x=[1~2],y=[1~6],zz=[00-FFH]}                                             =
+=   GET IR SYS                    : Get IR Custom Code                                                                        =
+=   GET IR OUTx INy CODE          : Get IR Data Code                                                                          =
+=-----------------------------------------------------------------------------------------------------------------------------=
+=*****************************************************************************************************************************=
+===============================================================================================================================
